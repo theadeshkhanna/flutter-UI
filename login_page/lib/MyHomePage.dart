@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -22,20 +20,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   padding: EdgeInsets.fromLTRB(15.0, 110.0, 0.0, 0.0),
                   child: Text(
                     'Hello',
-                    style: TextStyle(
-                      fontSize: 80,
-                      fontWeight: FontWeight.bold
-                    ),
+                    style: TextStyle(fontSize: 80, fontWeight: FontWeight.bold),
                   ),
                 ),
                 Container(
                   padding: EdgeInsets.fromLTRB(15.0, 175.0, 0.0, 0.0),
                   child: Text(
                     'There',
-                    style: TextStyle(
-                      fontSize: 80,
-                      fontWeight: FontWeight.bold
-                    ),
+                    style: TextStyle(fontSize: 80, fontWeight: FontWeight.bold),
                   ),
                 ),
                 Container(
@@ -43,10 +35,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text(
                     '.',
                     style: TextStyle(
-                      fontSize: 80,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.green
-                    ),
+                        fontSize: 80,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.green),
                   ),
                 ),
               ],
@@ -58,15 +49,11 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 TextField(
                   decoration: InputDecoration(
-                    labelText: 'EMAIL',
-                    labelStyle: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey
-                    ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.green)
-                    )
-                  ),
+                      labelText: 'EMAIL',
+                      labelStyle: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.grey),
+                      focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.green))),
                 ),
                 SizedBox(
                   height: 20.0,
@@ -75,12 +62,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   decoration: InputDecoration(
                     labelText: 'PASSWORD',
                     labelStyle: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey
-                    ),
+                        fontWeight: FontWeight.bold, color: Colors.grey),
                     focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.green)
-                    ),
+                        borderSide: BorderSide(color: Colors.green)),
                   ),
                   obscureText: true,
                 ),
@@ -94,10 +78,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Text(
                       'Forgot Password',
                       style: TextStyle(
-                        color: Colors.green,
-                        fontWeight: FontWeight.bold,
-                        decoration: TextDecoration.underline
-                      ),
+                          color: Colors.green,
+                          fontWeight: FontWeight.bold,
+                          decoration: TextDecoration.underline),
                     ),
                   ),
                 ),
@@ -109,19 +92,81 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Material(
                     borderRadius: BorderRadius.circular(20),
                     shadowColor: Colors.green,
+                    color: Colors.green,
                     elevation: 7.0,
                     child: GestureDetector(
                       onTap: () {},
                       child: Center(
                         child: Text(
                           'LOGIN',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
                         ),
                       ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Container(
+                  height: 40,
+                  color: Colors.transparent,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                            color: Colors.black,
+                            style: BorderStyle.solid,
+                            width: 1.0),
+                        color: Colors.transparent,
+                        borderRadius: BorderRadius.circular(20.0)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Center(
+                          child: ImageIcon(AssetImage('assets/logo.png')),
+                        ),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        Center(
+                          child: Text(
+                            'Log in with Facebook',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 )
               ],
             ),
+          ),
+          SizedBox(
+            height: 15.0,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'New to Spotify?',
+              ),
+              SizedBox(
+                width: 5.0,
+              ),
+              InkWell(
+                onTap: () {},
+                child: Text(
+                  'Register',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.green,
+                      decoration: TextDecoration.underline),
+                ),
+              )
+            ],
           )
         ],
       ),
